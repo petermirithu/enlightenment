@@ -1,0 +1,164 @@
+extends layout
+block content
+  section#header7-2r.header7.cid-s3zBFHUyJG
+    .container
+      .media-container-row
+        .media-content.align-right
+          h1.mbr-section-title.mbr-white.pb-3.mbr-fonts-style.display-1 Primary Intro
+          .mbr-section-text.mbr-white.pb-3
+            p.mbr-text.mbr-fonts-style.display-5
+              | Once you have mastered the idea of points, lines and planes, the next thing to consider is what happens when two lines or rays meet at a point, creating an angle between them.
+          .mbr-section-btn
+            a.btn.btn-md.btn-primary.display-4(href='Primary_class.html#gallery2-2q')
+              span.mbri-responsive.mbr-iconfont.mbr-iconfont-btn
+              | More Videos
+            a.btn.btn-md.btn-white-outline.display-4(href='Live_classes_1.html#header16-49') LIVE Class
+        .mbr-figure(style='width: 100%;')
+          //- iframe.mbr-embedded-video(src='https://youtu.be/kQETZgv04BI' width='1280' height='720' frameborder='0' allowfullscreen='')
+          iframe(width="633" height="376" src="https://www.youtube.com/embed/kQETZgv04BI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+  section#timeline1-2s.timeline1.cid-s3zCsGGUIO
+    .container.align-center
+      h2.mbr-section-title.pb-3.mbr-fonts-style.display-2
+        | Timeline
+      h3.mbr-section-subtitle.pb-5.mbr-fonts-style.display-5
+        | Below are the times we have online live classes.
+      .container.timelines-container(mbri-timelines='')
+        // 1
+        .row.timeline-element.reverse.separline
+          .timeline-date-panel.col-xs-12.col-md-6.align-left
+            .time-line-date-content
+              p.mbr-timeline-date.mbr-fonts-style.display-5
+                | Today @ 10am
+          span.iconBackground
+          .col-xs-12.col-md-6.align-right
+            .timeline-text-content
+              h4.mbr-timeline-title.pb-3.mbr-fonts-style.display-5
+                | What Is A River?
+              p.mbr-timeline-text.mbr-fonts-style.display-7
+                | Science expert Emerald Robinson explains what a river is and how the definition can mean many types of moving water.                
+
+              a(href="#") Join https://youtu.be/7kgQNRQjIUU
+        // 2
+        .row.timeline-element.separline
+          .timeline-date-panel.col-xs-12.col-md-6.align-right
+            .time-line-date-content
+              p.mbr-timeline-date.mbr-fonts-style.display-5
+                | Today @ 2pm
+          span.iconBackground
+          .col-xs-12.col-md-6.align-left
+            .timeline-text-content
+              h4.mbr-timeline-title.pb-3.mbr-fonts-style.display-5
+                | Rainforest Facts for Kids
+              p.mbr-timeline-text.mbr-fonts-style.display-7
+                | Rainforest Facts for Kids | All About the Amazon & Other Tropical Rainforests is an educational video for kids that will teach children about the 4 different layers of the tropical rainforests and the animals that live there.
+
+              a(href="#") Join https://youtu.be/BO4UYhhU-8c
+        // 3
+        .row.timeline-element.reverse
+          .timeline-date-panel.col-xs-12.col-md-6.align-left
+            .time-line-date-content
+              p.mbr-timeline-date.mbr-fonts-style.display-5
+                | Today @ 4pm
+          span.iconBackground
+          .col-xs-12.col-md-6.align-right
+            .timeline-text-content
+              h4.mbr-timeline-title.pb-3.mbr-fonts-style.display-5
+                | Seven Continents of the world
+              p.mbr-timeline-text.mbr-fonts-style.display-7
+                | Let's learn about Seven Continents of the world.
+
+              a(href="#") Join https://youtu.be/wYYakyS_HOg
+  section
+    .products
+      .container
+        .row
+          .col-md-12            
+            .filters
+              ul
+                li.active(onclick="filterSelection('all')") All Videos
+                li(onclick="filterSelection('des')") Maths
+                li(onclick="filterSelection('dev')") English
+                li(onclick="filterSelection('gra')") Science
+          .col-md-12
+            .filters-content
+              .row
+                .col-lg-4.col-md-4.all.filterDiv.des
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/Fe8u2I3vmHU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Basic Addition.                      
+                      p
+                        | When things are put together, we do addition. The sign used for addition is called plus
+                .col-lg-4.col-md-4.all.filterDiv.dev
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/EgzHCuzVKb8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Alphabets                     
+                      p
+                        | The 26 letters of the English alphabet.  Five vowels and twenty-one consonants. 
+                .col-lg-4.col-md-4.all.filterDiv.gra
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/libKVRa01L8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Solar System                    
+                      p
+                        | How many planets are in the solar system? How did it form in the Milky Way galaxy? Learn facts about the solar system’s genesis, plus its planets, moons, and asteroids.
+                .col-lg-4.col-md-4.all.filterDiv.gra
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/e9zkdrV8Yhc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Friction
+                      p
+                        | In this module, you will learn about friction and identify the factors affecting friction.
+                .col-lg-4.col-md-4.all.filterDiv.dev
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/VpESOerMY7I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Adverbs of Frequency
+                      p
+                        | In this video, you will learn actions we do in the morning. Each sentence has an illustration to help you understand the meaning. In the second half of this video, you will practice speaking English on your own. This will help your English ability and you will learn adverbs of frequency.
+                .col-lg-4.col-md-4.all.filterDiv.des
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/gT0HFbA1Mow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Basic Division
+                      p
+                        | Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.                                              
+  script.
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }      

@@ -1113,4 +1113,13 @@
     $(document).on('change', 'input[type="range"]', function(e){
         $(e.target).parents('.form-group').find('.value')[0].innerHTML = e.target.value;
     });
+    $('.filters ul li').click(function(){
+        $('.filters ul li').removeClass('active');
+        $(this).addClass('active');
+          
+          var data = $(this).attr('data-filter');
+          $grid.isotope({
+            filter: data
+          })
+        });
 }(jQuery));
