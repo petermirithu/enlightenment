@@ -14,4 +14,8 @@ router.get('/contact', function(req, res) {
   res.render('contact', { title: 'Contact' });
 });
 
+router.get('/courses', function(req, res) {
+  res.render('courses', { title: 'Courses' });
+});
+
 module.exports = router;
