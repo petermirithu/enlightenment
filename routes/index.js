@@ -18,4 +18,7 @@ router.get('/courses', function(req, res) {
   res.render('courses', { title: 'Courses' });
 });
 
+router.get('/primary_courses', function(req, res) {
+  res.render('primary_courses', { title: 'Primary Courses' });
+});
 module.exports = router;
