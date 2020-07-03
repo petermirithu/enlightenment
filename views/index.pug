@@ -1,31 +1,491 @@
-extends layout
-
-block content  
-  div.container-fluid
-    header
-      .overlay
-      video(playsinline='playsinline' autoplay='autoplay' muted='muted' loop='loop')
-        source(src='/video/video.mp4' type='video/mp4')
-      .container.h-100
-        .d-flex.h-100.text-center.align-items-center
-          .w-100.text-white
-            h1.display-3 Video Header
-            p.lead.mb-0 With HTML5 Video and Bootstrap 4
-  section.my-5
-    .container
-      .row
-        .col-md-8.mx-auto
-          p
-            | The HTML5 video element uses an mp4 video as a source. Change the source video to add in your own background! The header text is vertically centered using flex utilities that are build into Bootstrap 4.
-          p
-            | The overlay color can be changed by changing the 
-            code background-color
-            |  of the 
-            code .overlay
-            |  class in the CSS.
-          p
-            | Set the mobile fallback image in the CSS by changing the background image of the header element within the media query at the bottom of the CSS snippet.
-          p.mb-0
-            | Created by 
-            a(href='https://startbootstrap.com') Start Bootstrap
-
+doctype html
+head  
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='generator' content='Pyra, https://github.com/petermirithu')
+  meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1')
+  link(rel='shortcut icon' href='images/logo.png' type='image/icon')
+  meta(name='description' content='Landing page')
+  title Home
+  link(rel='stylesheet' href='stylesheets/mobirise-icons-bold.css')
+  link(rel='stylesheet' href='stylesheets/mobirise-icons.css')
+  link(rel='stylesheet' href='stylesheets/bootstrap.min.css')
+  link(rel='stylesheet' href='stylesheets/bootstrap-grid.min.css')
+  link(rel='stylesheet' href='stylesheets/bootstrap-reboot.min.css')  
+  link(rel='stylesheet' href='stylesheets/navbar.css')
+  link(rel='stylesheet' href='stylesheets/animate.min.css')
+  link(rel='stylesheet' href='stylesheets/tether.min.css')
+  link(rel='stylesheet' href='stylesheets/socicon.css')
+  link(rel='stylesheet' href='stylesheets/theme.css')
+  link(rel='preload' as='style' href='stylesheets/mbr-additional.css')
+  link(rel='stylesheet' href='stylesheets/mbr-additional.css' type='text/css')
+section#menu1-0.menu.cid-qTkzRZLJNu(once='menu')
+  nav.navbar.navbar-expand.beta-menu.navbar-dropdown.align-items-center.navbar-fixed-top.navbar-toggleable-sm
+    button.navbar-toggler.navbar-toggler-right(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      .hamburger
+        span
+        span
+        span
+        span
+    .menu-logo
+      .navbar-brand
+        span.navbar-logo
+          a(href='index.html#header6-d')
+            img(src='images/logo.png' alt='Logo' title='' style='height: 3.8rem;')
+        span.navbar-caption-wrap
+          a.navbar-caption.text-white.display-4(href='index.html#header6-d') Enlight
+            em(style="color:#FFC75F") en
+            b ment
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.nav-dropdown(data-app-modern-menu='true')
+        li.nav-item
+          a.nav-link.link.text-white.display-4(href='#')
+        li.nav-item
+          a.nav-link.link.text-white.display-4(href='index.html#header6-d')            
+            span.mbrib-home.mbr-iconfont.mbr-iconfont-btn
+            | Home
+        li.nav-item
+          a.nav-link.link.text-white.display-4(href='about.html#header16-b') About Us
+        li.nav-item.dropdown
+          a.nav-link.link.text-white.dropdown-toggle.display-4(href='courses.html#header12-3s' data-toggle='dropdown-submenu' aria-expanded='false') Courses
+          .dropdown-menu
+            a.text-white.dropdown-item.display-4(href='courses.html#header12-3s' aria-expanded='true') General
+            a.text-white.dropdown-item.display-4(href='Primary_courses.html#header8-2g') Primary Level
+            a.text-white.dropdown-item.display-4(href='Secondary_courses.html#header8-2u' aria-expanded='false') Secondary Level
+            a.text-white.dropdown-item.display-4(href='University_courses.html#header8-35' aria-expanded='false') University Level
+        li.nav-item
+          a.nav-link.link.text-white.display-4(href='contact.html#header16-1n') Contact Us
+        li.nav-item
+          a.nav-link.link.text-white.display-4(href='#')
+            span.mbrib-search.mbr-iconfont.mbr-iconfont-btn(style='color: rgb(0, 106, 186);')
+        li.nav-item
+          a.nav-link.link.text-white.display-4(href='#')
+      .navbar-buttons.mbr-section-btn
+        a.btn.btn-sm.btn-success.display-4(href='#')
+          span.mbrib-login.mbr-iconfont.mbr-iconfont-btn
+          | Sign In
+        
+//- https://youtu.be/ecABW3r0ZJo
+section#header6-d.header6.cid-s3uWYKqdpM.mbr-fullscreen(data-bg-video='https://youtu.be/YbvXtEVmbNk?t=1')
+  .mbr-overlay(style='opacity: 0.7; background-color: rgb(35, 35, 35);')
+  .container
+    .row.justify-content-md-center
+      .mbr-white.col-md-10
+        h1.mbr-section-title.align-center.mbr-bold.pb-3.mbr-fonts-style.display-1 Enlightenment
+        p.mbr-text.align-center.pb-3.mbr-fonts-style.display-5
+          | Welcome to Enlightenment&nbsp;where we focus on stretching education for free to all who are in search of knowledge.
+        .mbr-section-btn.align-center
+          a.btn.btn-md.btn-success.display-4(href='contact.html#header16-1n')
+            span.mbri-pin.mbr-iconfont.mbr-iconfont-btn                        
+            | Our Offices
+          a.btn.btn-md.btn-white-outline.display-4(href='courses.html#header12-3s')
+            span.mbri-add-submenu.mbr-iconfont.mbr-iconfont-btn
+            | Courses
+  .mbr-arrow.hidden-sm-down(aria-hidden='true')
+    a(href='#next')
+      i.mbri-down.mbr-iconfont
+section#toggle2-1e.toggle2.cid-s3vDOWQgYC
+  .container
+    .media-container-row
+      .toggle-content
+        h2.mbr-section-title.pb-3.align-left.mbr-fonts-style.display-2 Online Study For Free
+        #bootstrap-toggle.toggle-panel.accordionStyles.tab-content.pt-5.mt-2
+          .card
+            #headingOne.card-header(role='tab')
+              a.collapsed.panel-title.text-black(role='button' data-toggle='collapse' data-core='' href='#collapse1_7' aria-expanded='false' aria-controls='collapse1')
+                h4.mbr-fonts-style.display-5
+                  span.sign.mbr-iconfont.mbri-arrow-down.inactive
+                  |  What is Enlightenment?
+            #collapse1_7.panel-collapse.noScroll.collapse(role='tabpanel' aria-labelledby='headingOne')
+              .panel-body.p-4
+                p.mbr-fonts-style.panel-text.display-7
+                  |  It is a website that offers free education to students ranging from primary level to univertsity level. We are more concerned on the development of the society all around the world.
+          .card
+            #headingTwo.card-header(role='tab')
+              a.collapsed.panel-title.text-black(role='button' data-toggle='collapse' data-core='' href='#collapse2_7' aria-expanded='false' aria-controls='collapse2')
+                h4.mbr-fonts-style.display-5
+                  span.sign.mbr-iconfont.mbri-arrow-down.inactive
+                  |  Is it good for me?
+            #collapse2_7.panel-collapse.noScroll.collapse(role='tabpanel' aria-labelledby='headingTwo')
+              .panel-body.p-4
+                p.mbr-fonts-style.panel-text.display-7
+                  |  It is perfect for all students due to the simplicity and availability of resources you could use to enhance your learning.
+          .card
+            #headingThree.card-header(role='tab')
+              a.collapsed.panel-title.text-black(role='button' data-toggle='collapse' data-core='' href='#collapse3_7' aria-expanded='true' aria-controls='collapse3')
+                h4.mbr-fonts-style.display-5
+                  span.sign.mbr-iconfont.mbri-arrow-down.inactive
+                  |  Why Enlightenment?
+            #collapse3_7.panel-collapse.noScroll.collapse(role='tabpanel' aria-labelledby='headingThree')
+              .panel-body.p-4
+                p.mbr-fonts-style.panel-text.display-7
+                  | Key factors making us unique:
+                  br
+                  | * 
+                  strong Free
+                  | online Studies from primary level to University Level.
+                  br
+                  | * Certificate courses in 
+                  strong Computing
+                  |  and 
+                  strong CPA
+                  |  at a reasonable cost.
+                  br
+                  | * Teachers and Lecturers with 
+                  strong passion
+                  |  since they are all volunteering.
+                  br
+                  br
+                  br
+                  br
+      .mbr-figure(style='width: 89%;')
+        img(src='images/mbr-950x633.jpg' alt='Enlightenment' title='')
+section#clients-12.clients.cid-s3v3avt914(data-interval='false')
+  .mbr-overlay(style='opacity: 0.5; background-color: rgb(0, 106, 186);')
+  .container.mb-5
+    .media-container-row
+      .col-12.align-center
+        h2.mbr-section-title.pb-3.mbr-fonts-style.display-2 Our Partners
+        h3.mbr-section-subtitle.mbr-light.mbr-fonts-style.display-5 Here are a few of learning institutions and companies that we partner with.
+  .container
+    .carousel.slide(role='listbox' data-pause='true' data-keyboard='false' data-ride='carousel' data-interval='6000')
+      .carousel-inner(data-visible='5')
+        .carousel-item
+          .media-container-row
+            .col-md-12
+              .wrap-img
+                img.img-responsive.clients-img(src='images/google.gif' alt='' title='')
+        .carousel-item
+          .media-container-row
+            .col-md-12
+              .wrap-img
+                img.img-responsive.clients-img(src='images/linkedin.gif' alt='' title='')
+        .carousel-item
+          .media-container-row
+            .col-md-12
+              .wrap-img
+                img.img-responsive.clients-img(src='images/twitter.gif' alt='' title='')
+        .carousel-item
+          .media-container-row
+            .col-md-12
+              .wrap-img
+                img.img-responsive.clients-img(src='images/usiu.jpg')
+        .carousel-item
+          .media-container-row
+            .col-md-12
+              .wrap-img
+                img.img-responsive.clients-img(src='images/moringa.png')
+      .carousel-controls
+        a.carousel-control.carousel-control-prev(data-app-prevent-settings='' role='button' data-slide='prev')
+          span.mbri-left.mbr-iconfont(aria-hidden='true')
+          span.sr-only Previous
+        a.carousel-control.carousel-control-next(data-app-prevent-settings='' role='button' data-slide='next')
+          span.mbri-right.mbr-iconfont(aria-hidden='true')
+          span.sr-only Next
+section#features6-14.features6.cid-s3v9v91xnv
+  .container
+    h2.mbr-section-title.pb-3.mbr-fonts-style.display-2 Learning Outcomes
+    .media-container-row
+      .card.p-3.col-12.col-md-6.col-lg-3
+        .card-img.pb-3
+          span.mbr-iconfont.mbri-smile-face(style='color: rgb(0, 106, 186); fill: rgb(0, 106, 186);')
+        .card-box
+          h4.card-title.py-3.mbr-fonts-style.display-7 Equip your children
+          p.mbr-text.mbr-fonts-style.display-7 In areas of science, maths, english and social studies.
+      .card.p-3.col-12.col-md-6.col-lg-3
+        .card-img.pb-3
+          span.mbr-iconfont.mbri-briefcase(style='color: rgb(0, 106, 186); fill: rgb(0, 106, 186);')
+        .card-box
+          h4.card-title.py-3.mbr-fonts-style.display-7 Get ready for a career
+          p.mbr-text.mbr-fonts-style.display-7
+            | In high-demand fields like Accounting, Software Engineering, Pharmacy and many more.
+      .card.p-3.col-12.col-md-6.col-lg-3
+        .card-img.pb-3
+          span.mbr-iconfont.mbri-file(style='color: rgb(0, 106, 186); fill: rgb(0, 106, 186);')
+        .card-box
+          h4.card-title.py-3.mbr-fonts-style.display-7 Earn a certificate
+          p.mbr-text.mbr-fonts-style.display-7 That is in Computing and CPA.
+      .card.p-3.col-12.col-md-6.col-lg-3
+        .card-img.pb-3          
+          span.mbr-iconfont.mbri-users(style='color: rgb(0, 106, 186); fill: rgb(0, 106, 186);')
+        .card-box
+          h4.card-title.py-3.mbr-fonts-style.display-7 Upskill your organization
+          p.mbr-text.mbr-fonts-style.display-7 With training videos to enhance their skills.
+section#counters2-4c.counters2.counters.cid-s3AEB1zYUQ
+  .container.pt-4.mt-2
+    .media-container-row
+      .media-block(style='width: 49%;')
+        h2.mbr-section-title.pb-3.align-left.mbr-fonts-style.display-2
+          | Enrollment
+        h3.mbr-section-subtitle.pb-5.align-left.mbr-fonts-style.display-5
+          | We accept students from all other the world
+        .mbr-figure
+          img(src='images/mbr-1024x681.jpg' alt='' title='')
+      .cards-block
+        .cards-container
+          .card.px-3.align-left.col-12.col-md-6
+            .panel-item.p-3
+              .card-img.pb-3
+                span.mbr-iconfont.pr-2.mbri-smile-face(style='color: rgb(0, 106, 186); fill: rgb(0, 106, 186);')
+                h3.count.py-3.mbr-fonts-style.display-2 212
+              .card-text
+                h4.mbr-content-title.mbr-bold.mbr-fonts-style.display-7 Primary Students
+                p.mbr-content-text.mbr-fonts-style.display-7
+                  | From grade 1 to grade 8.
+          .card.px-3.align-left.col-12.col-md-6
+            .panel-item.p-3
+              .card-img.pb-3
+                span.mbr-iconfont.pr-2.mbri-extension(style='color: rgb(0, 106, 186); fill: rgb(0, 106, 186);')
+                h3.count.py-3.mbr-fonts-style.display-2
+                  | 430
+              .card-text
+                h4.mbr-content-title.mbr-bold.mbr-fonts-style.display-7 Secondary Students
+                p.mbr-content-text.mbr-fonts-style.display-7
+                  | From form 1 to form 4.
+          .card.px-3.align-left.col-12.col-md-6
+            .panel-item.p-3
+              .card-img.pb-3
+                span.mbr-iconfont.pr-2.mbri-briefcase(style='color: rgb(0, 106, 186); fill: rgb(0, 106, 186);')
+                h3.count.py-3.mbr-fonts-style.display-2 478
+              .card-text
+                h4.mbr-content-title.mbr-bold.mbr-fonts-style.display-7
+                  | University Students
+                p.mbr-content-text.mbr-fonts-style.display-7
+                  | From first year students to forth year students.
+          .card.px-3.align-left.col-12.col-md-6
+            .panel-item.p-3
+              .card-img.pb-3
+                span.mbr-iconfont.pr-2.mbri-globe-2(style='color: rgb(0, 106, 186); fill: rgb(0, 106, 186);')
+                h3.count.py-3.mbr-fonts-style.display-2
+                  | 1120
+              .card-texts
+                h4.mbr-content-title.mbr-bold.mbr-fonts-style.display-7
+                  | Total Students
+                p.mbr-content-text.mbr-fonts-style.display-7
+                  | Free and reliable to all.
+section#features8-7.features8.cid-s3uUVPKNeF.mbr-parallax-background
+  .mbr-overlay(style='opacity: 0.6; background-color: rgb(0, 0, 0);')
+  .container
+    .media-container-row
+      .card.col-12.col-md-6.col-lg-4
+        .card-img
+          span.mbri-smile-face.mbr-iconfont
+        .card-box.align-center
+          h4.card-title.mbr-fonts-style.display-7 Primary Level
+          p.mbr-text.mbr-fonts-style.display-7
+            | Get equiped in areas of science, maths, english and social studies and many more.
+          .mbr-section-btn.text-center
+            a.btn.btn-success-outline.display-4(href='Primary_courses.html#header8-2g')
+              span.mbri-edit.mbr-iconfont.mbr-iconfont-btn
+              | Join
+      .card.col-12.col-md-6.col-lg-4
+        .card-img
+          span.mbri-extension.mbr-iconfont
+        .card-box.align-center
+          h4.card-title.mbr-fonts-style.display-7 Secondary Level
+          p.mbr-text.mbr-fonts-style.display-7
+            | Get equiped in maths, english, computer, business, agriculture, physics, biology, chemistry and many more.
+          .mbr-section-btn.text-center
+            a.btn.btn-success-outline.display-4(href='Secondary_courses.html#header8-2u')
+              span.mbri-edit.mbr-iconfont.mbr-iconfont-btn
+              | Join
+      .card.col-12.col-md-6.col-lg-4
+        .card-img
+          span.mbri-briefcase.mbr-iconfont
+        .card-box.align-center
+          h4.card-title.mbr-fonts-style.display-7 University Level
+          p.mbr-text.mbr-fonts-style.display-7
+            |  Get equiped on liberal arts, pharmacy, computer science, business courses, and mechanical courses.
+          .mbr-section-btn.text-center
+            a.btn.btn-success-outline.display-4(href='University_courses.html#header8-35')
+              span.mbri-edit.mbr-iconfont.mbr-iconfont-btn
+              | Join
+section#info1-1f.mbr-section.info1.cid-s3vJru3lPu
+  .container
+    .row.justify-content-center.content-row
+      .media-container-column.title.col-12.col-lg-7.col-md-6
+        h3.mbr-section-subtitle.align-left.mbr-light.pb-3.mbr-fonts-style.display-5 Computing and CPA
+        h2.align-left.mbr-bold.mbr-fonts-style.display-2 Certificate Courses
+      .media-container-column.col-12.col-lg-3.col-md-4
+        .mbr-section-btn.align-right.py-4
+          a.btn.btn-primary.display-4(href='courses.html#services2-4n')
+            span.mbrib-preview.mbr-iconfont.mbr-iconfont-btn
+            | View More
+section#counters1-e.counters1.counters.cid-s3uXcRBMJh
+  .container
+    h2.mbr-section-title.pb-3.align-center.mbr-fonts-style.display-2
+      | Resources
+      br
+    h3.mbr-section-subtitle.mbr-fonts-style.display-5 Below are our main sources of information to facilitate education.
+    .container.pt-4.mt-2
+      .media-container-row
+        .card.p-3.align-center.col-12.col-md-6.col-lg-4
+          .panel-item.p-3
+            .card-img.pb-3
+              span.mbr-iconfont.mbri-users(style='color: rgb(0, 106, 186); fill: rgb(0, 106, 186);')
+            .card-text
+              h3.count.pt-3.pb-3.mbr-fonts-style.display-2 200
+              h4.mbr-content-title.mbr-bold.mbr-fonts-style.display-7 Teachers &amp; Lecturers
+              p.mbr-content-text.mbr-fonts-style.display-7
+                | We have volunteer teachers and lecturers whom we partner with from various universities around the world.
+                br
+                | Feel free to join us if your lecturer or teacher.
+        .card.p-3.align-center.col-12.col-md-6.col-lg-4
+          .panel-item.p-3
+            .card-img.pb-3
+              span.mbr-iconfont.mbri-cloud(style='color: rgb(0, 106, 186); fill: rgb(0, 106, 186);')
+            .card-text
+              h3.count.pt-3.pb-3.mbr-fonts-style.display-2 80
+              h4.mbr-content-title.mbr-bold.mbr-fonts-style.display-7 Online Libraries
+              p.mbr-content-text.mbr-fonts-style.display-7
+                | Our online libraries contain books and various articles that can help in gaining more knowledge
+        .card.p-3.align-center.col-12.col-md-6.col-lg-4
+          .panel-item.p-3
+            .card-img.pb-3
+              span.mbr-iconfont.mbri-database(style='color: rgb(0, 106, 186); fill: rgb(0, 106, 186);')
+            .card-text
+              h3.count.pt-3.pb-3.mbr-fonts-style.display-2
+                | 350
+              h4.mbr-content-title.mbr-bold.mbr-fonts-style.display-7 Databases
+              p.mbr-content-text.mbr-fonts-style.display-7
+                | Contain Online videos to aid learning with other learning materials such as podcasts
+section#info2-1c.mbr-section.info2.cid-s3vAr7rAKz
+  .container
+    .row.main.justify-content-center
+      .media-container-column.col-12.col-lg-3.col-md-4
+        .mbr-section-btn.align-left.py-4
+          a.btn.btn-primary.display-4(href='page10.html#info2-3o')
+            span.mbri-preview.mbr-iconfont
+            | View More
+      .media-container-column.title.col-12.col-lg-7.col-md-6
+        h2.align-right.mbr-bold.mbr-white.pb-3.mbr-fonts-style.display-2 Volunteer us as a Tutor.
+        h3.mbr-section-subtitle.align-right.mbr-light.mbr-white.mbr-fonts-style.display-5
+          | Join us as a Teacher or Lecturer and help us reach out to the less fortunate as well offer knowlegde for development.
+section#services2-16.services2.cid-s3vsMmnvC0
+  // 
+  // 
+  // Overlay
+  // Container
+  .container
+    .col-md-12
+      .media-container-row
+        .mbr-figure(style='width: 50%;')
+          img(src='images/mbr-952x635.jpg' alt='Enlightenment' title='')
+        .align-left.aside-content
+          h2.mbr-title.pt-2.mbr-fonts-style.display-2 Support Us
+          .mbr-section-text
+            p.mbr-text.text1.pt-2.mbr-light.mbr-fonts-style.display-7
+              | Help us raise generate more study content as well as reach out to many others who need free education to help them succeed in future.
+            p.mbr-text.text2.pt-4.mbr-light.mbr-fonts-style.display-7 All forms of support are welcome.
+          // Btn
+          .mbr-section-btn.pt-3.align-left
+            a.btn.btn-primary.display-4(href='index.html')
+              span.mbri-mobile.mbr-iconfont.mbr-iconfont-btn
+              | Mpesa
+            a.btn.btn-primary-outline.display-4(href='index.html')
+              span.mbri-cash.mbr-iconfont.mbr-iconfont-btn
+              | KCB bank
+section#form3-4p.mbr-section.form3.cid-s3BUW9kEGT
+  .container
+    .row.justify-content-center
+      .title.col-12.col-lg-8
+        h2.align-center.pb-2.mbr-fonts-style.display-2
+          | SUBSCRIBE FORM
+        h3.mbr-section-subtitle.align-center.pb-5.mbr-light.mbr-fonts-style.display-5
+          | Subscribe to our Newsletter
+    .row.py-2.justify-content-center
+      .col-12.col-lg-6.col-md-8(data-form-type='formoid')
+        // -Formbuilder Form-
+        form.mbr-form.form-with-styler(action='#' method='POST' data-form-title='Enlightenment Form')
+          input(type='hidden' name='email' data-form-email='true' value='5g1MOlxrOcVXp/2d4gCuOJRjNIbElQrWL3uZk8FJWwCQEPO/k2oLS8qG6mjM1yMpTAFX0AAgvCQ69n6IZYJ8LS1AAudutZoYiYVG/UfQ4ZXcHgZyG0jgM45TWZJxFLTw')
+          .row
+            .alert.alert-success.col-12(hidden='hidden' data-form-alert='') Thanks for filling out the form!
+            .alert.alert-danger.col-12(hidden='hidden' data-form-alert-danger='')
+          .dragArea.row
+            .form-group.col(data-for='email')
+              input#email-form3-4p.form-control.display-7(type='email' name='email' placeholder='Email' data-form-field='Email' required='required')
+            .col-auto.input-group-btn
+              button.btn.btn-primary.display-4(type='submit') SUBSCRIBE
+        // -Formbuilder Form-
+section#footer1-2.cid-qTkAaeaxX5.mbr-reveal
+  .container
+    .media-container-row.content.text-white
+      .col-12.col-md-3
+        .media-wrap
+          a(href='#')
+            img(src='images/logo.png' alt='Enlightenment' title='')
+      .col-12.col-md-3.mbr-fonts-style.display-7
+        h5.pb-3
+          | Address
+        p.mbr-text
+          | 304 Kenyatta Avenue
+          br
+          | Nairobi, Kenya.
+      .col-12.col-md-3.mbr-fonts-style.display-7
+        h5.pb-3
+          | Contacts
+        p.mbr-text
+          | Email: enlightenment@gmail.com
+          br
+          | Phone: +2547 20 292 983&nbsp;
+          br
+          | Fax: +2547 302 320 129
+      .col-12.col-md-3.mbr-fonts-style.display-7
+        h5.pb-3
+          | Support Team
+        p.mbr-text
+          | Pyra
+          br
+          | Jakes
+          br
+          | Maria
+    .footer-lower
+      .media-container-row
+        .col-sm-12
+          hr
+      .media-container-row.mbr-white
+        .col-sm-6.copyright
+          p.mbr-text.mbr-fonts-style.display-7
+            | &copy; Copyright 2020 Enlightenment - All Rights Reserved
+        .col-md-6
+          .social-list.align-right
+            .soc-item
+              a(href='#' target='_blank')
+                span.socicon-twitter.socicon.mbr-iconfont.mbr-iconfont-social
+            .soc-item
+              a(href='#' target='_blank')
+                span.socicon-facebook.socicon.mbr-iconfont.mbr-iconfont-social
+            .soc-item
+              a(href='#' target='_blank')
+                span.socicon-youtube.socicon.mbr-iconfont.mbr-iconfont-social
+            .soc-item
+              a(href='#' target='_blank')
+                span.socicon-instagram.socicon.mbr-iconfont.mbr-iconfont-social
+            .soc-item
+              a(href='#' target='_blank')
+                span.socicon-googleplus.socicon.mbr-iconfont.mbr-iconfont-social
+script(src='javascripts/jquery.min.js')
+script(src='javascripts/popper.min.js')
+script(src='javascripts/bootstrap.min.js')
+script(src='https://apis.google.com/js/plusone.js')
+script(src='javascripts/smooth-scroll.js')
+script(src='javascripts/jquery.viewportchecker.js')
+script(src='javascripts/nav-dropdown.js')
+script(src='javascripts/navbar-dropdown.js')
+script(src='javascripts/jquery.touch-swipe.min.js')
+script(src='javascripts/cookies-alert-core.js')
+script(src='javascripts/cookies-alert-script.js')
+script(src='javascripts/jquery.mb.ytplayer.min.js')
+script(src='javascripts/jquery.mb.vimeo_player.js')
+script(src='javascripts/mbr-switch-arrow.js')
+script(src='javascripts/bootstrap-carousel-swipe.js')
+script(src='javascripts/mbr-clients-slider.js')
+script(src='javascripts/jarallax.min.js')
+script(src='javascripts/tether.min.js')
+script(src='javascripts/theme.js')
+script(src='javascripts/formoid.min.js')
+input(name='cookieData' type='hidden' data-cookie-customdialogselector='null' data-cookie-colortext='#000000' data-cookie-colorbg='rgba(234, 239, 241, 0.99)' data-cookie-textbutton='Agree' data-cookie-colorbutton='' data-cookie-colorlink='#006aba' data-cookie-underlinelink='true' data-cookie-text="We use cookies to give you the best experience. Read our <a href='#'>cookie policy</a>.")
+#scrollToTop.scrollToTop.mbr-arrow-up
+  a(style='text-align: center;')
+    i.mbr-arrow-up-icon.mbr-arrow-up-icon-cm.cm-icon.cm-icon-smallarrow-up
+input(name='animation' type='hidden')
