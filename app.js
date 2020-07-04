@@ -4,6 +4,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+<<<<<<< HEAD
 var expressValidator = require('express-validator');
 var flash = require('connect-flash');
 var session = require('cookie-session');
@@ -11,11 +12,16 @@ var db = require('./models/index');
 var http    = require('http')
 
 const passport = require('passport');
+=======
+>>>>>>> e100a71af6da32effbcb14a1bf1ca112a193289c
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e100a71af6da32effbcb14a1bf1ca112a193289c
 var app = express();
 
 // view engine setup
@@ -28,6 +34,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+<<<<<<< HEAD
 app.use(expressValidator());
 app.use(session({ cookie: { maxAge: 60000 }, 
     secret: 'wosdwswdwdwdwqdwqddqwdwdqdqwot',
@@ -51,6 +58,11 @@ app.use('/user', users);
 
 // passport config
 require('./config/passport')(passport);
+=======
+
+app.use('/', routes);
+app.use('/users', users);
+>>>>>>> e100a71af6da32effbcb14a1bf1ca112a193289c
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

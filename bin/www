@@ -1,11 +1,20 @@
 #!/usr/bin/nodejs
+<<<<<<< HEAD
 var debug = require('debug')('todo_app');
+=======
+var debug = require('debug')('my-application');
+>>>>>>> e100a71af6da32effbcb14a1bf1ca112a193289c
 var app = require('../app');
 
 app.set('port', process.env.PORT || 3000);
 
 var server = app.listen(app.get('port'), function() {
+<<<<<<< HEAD
   debug('Express server listening on port ' + server.address().port);  
 });
 
 console.log('Visit port http://localhost:3000/');
+=======
+  debug('Express server listening on port ' + server.address().port);
+});
+>>>>>>> e100a71af6da32effbcb14a1bf1ca112a193289c
