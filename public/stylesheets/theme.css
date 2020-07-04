@@ -1155,8 +1155,7 @@
     margin: 0px 10px;
     transition: all .3s;
     cursor: pointer;
-  }
-  
+  }  
   .products .filters ul li.active,
   .products .filters ul li:hover {
     color: #0b45e2;
@@ -1194,6 +1193,7 @@
   .product-item {
     border: 1px solid #eee;
     margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);        
   }
   
   .product-item .down-content {
@@ -1218,4 +1218,12 @@
   
 .show {
     display: block;
-  }    
+  }   
+
+/*live class  */
+.video_c{
+  height: 400px !important;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+  
