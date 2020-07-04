@@ -1,2 +1,2 @@
-# The Enlightenment
+# Enlightenment
 ![picture](public/images/enlight.png)
