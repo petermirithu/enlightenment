@@ -1,0 +1,163 @@
+extends layout
+block content
+  section#header7-2r.header7.cid-s3zBFHUyJG
+    .container
+      .media-container-row
+        .media-content.align-right
+          h1.mbr-section-title.mbr-white.pb-3.mbr-fonts-style.display-1 University Intro
+          .mbr-section-text.mbr-white.pb-3
+            p.mbr-text.mbr-fonts-style.display-5
+              | A short clip about the 4 Principles of Marketing Strategy.  Want to know: How do I get customers? How do I determine my target markets? What's my competitive advantage? 
+          .mbr-section-btn
+            a.btn.btn-md.btn-primary.display-4(href='#products')
+              span.mbri-responsive.mbr-iconfont.mbr-iconfont-btn
+              | More Videos
+            a.btn.btn-md.btn-white-outline.display-4(href='/live_classes_3') LIVE Class
+        .mbr-figure(style='width: 100%;')          
+          iframe.mbr-embedded-video(width="633" height="376" src="https://www.youtube.com/embed/hZLMv5aexto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+  section#timeline1-2s.timeline1.cid-s3zCsGGUIO
+    .container.align-center
+      h2.mbr-section-title.pb-3.mbr-fonts-style.display-2
+        | Timeline
+      h3.mbr-section-subtitle.pb-5.mbr-fonts-style.display-5
+        | Below are the times we have online live classes.
+      .container.timelines-container(mbri-timelines='')
+        // 1
+        .row.timeline-element.reverse.separline
+          .timeline-date-panel.col-xs-12.col-md-6.align-left
+            .time-line-date-content
+              p.mbr-timeline-date.mbr-fonts-style.display-5
+                | Today @ 8.30am
+          span.iconBackground
+          .col-xs-12.col-md-6.align-right
+            .timeline-text-content
+              h4.mbr-timeline-title.pb-3.mbr-fonts-style.display-5
+                | Pharmacy Calculations
+              p.mbr-timeline-text.mbr-fonts-style.display-7
+                | New Pharmacy Calculations you shouldn't miss out.
+
+              a(href="/live_classes_3") Join 
+        // 2
+        .row.timeline-element.separline
+          .timeline-date-panel.col-xs-12.col-md-6.align-right
+            .time-line-date-content
+              p.mbr-timeline-date.mbr-fonts-style.display-5
+                | Today @ 12pm
+          span.iconBackground
+          .col-xs-12.col-md-6.align-left
+            .timeline-text-content
+              h4.mbr-timeline-title.pb-3.mbr-fonts-style.display-5
+                | Civil Engineering Units Conversion
+              p.mbr-timeline-text.mbr-fonts-style.display-7
+                | Learn about Civil Engineering Units Conversion and what are the basic civil engineering units of volume, area and length (Cft/Cum, Sqm/Sft, meter/foot/inch).
+
+              a(href="/live_classes_3") Join 
+        // 3
+        .row.timeline-element.reverse
+          .timeline-date-panel.col-xs-12.col-md-6.align-left
+            .time-line-date-content
+              p.mbr-timeline-date.mbr-fonts-style.display-5
+                | Today @ 3pm
+          span.iconBackground
+          .col-xs-12.col-md-6.align-right
+            .timeline-text-content
+              h4.mbr-timeline-title.pb-3.mbr-fonts-style.display-5
+                | Tips for Success in University
+              p.mbr-timeline-text.mbr-fonts-style.display-7
+                | Hernan Humana, associate lecturer in the School of Kinesiology & Health Science, offers tips for success at university. 
+
+              a(href="/live_classes_3") Join
+  section#products
+    .products
+      .container
+        .row
+          .col-md-12            
+            .filters
+              ul
+                li.btn.btn-primary.active(onclick="filterSelection('all')") All Videos
+                li.btn.btn-primary(onclick="filterSelection('des')") Business
+                li.btn.btn-primary(onclick="filterSelection('dev')") Applied Computer Technology
+                li.btn.btn-primary(onclick="filterSelection('gra')") University Success
+          .col-md-12
+            .filters-content
+              .row
+                .col-lg-4.col-md-4.all.filterDiv.des
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/AkjsrJNdIR4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Introduction to Business Ethics
+                      p
+                        | Business ethics refers to implementing appropriate business policies and practices with regard to arguably controversial subjects.
+                .col-lg-4.col-md-4.all.filterDiv.dev
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/QKfk7YFILws" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Computer Networking                    
+                      p
+                        | In this comprehensive computer networking course you will learn ins and out of computer networking.
+                .col-lg-4.col-md-4.all.filterDiv.gra
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/SOEmM5gmTJM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 APA Referencing
+                      p
+                        | This video lecture gives an overview of Referencing, with particular attention in an APA environment.
+                .col-lg-4.col-md-4.all.filterDiv.gra
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/rKS_HhdSJ_4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Sir Ken Robinson - SCHOOLS KILL CREATIVITY
+                      p
+                        | Sir Ken Robinson is among the world's elite thinkers when it comes to creativity and innovation.
+                .col-lg-4.col-md-4.all.filterDiv.dev
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/mXw9ruZaxzQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Operating System
+                      p
+                        | An operating system is system software that manages computer hardware and software resources and provides common services for computer programs.
+                .col-lg-4.col-md-4.all.filterDiv.des
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/WxXCPmKkfUI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Intro to Financial Management
+                      p
+                        | Finance is the study of how people and business evaluate investments and raise capital to fund them.
+  script.
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }      
