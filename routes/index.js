@@ -34,4 +34,12 @@ router.get('/primary_class', function(req, res) {
   res.render('primary_class', { title: 'Primary Class' });
 });
 
+router.get('/secondary_class', function(req, res) {
+  res.render('secondary_class', { title: 'Secondary Class' });
+});
+
+router.get('/university_class', function(req, res) {
+  res.render('university_class', { title: 'University Class' });
+});
+
 module.exports = router;
