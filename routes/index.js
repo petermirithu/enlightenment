@@ -42,4 +42,16 @@ router.get('/university_class', function(req, res) {
   res.render('university_class', { title: 'University Class' });
 });
 
+router.get('/live_classes_1', function(req, res) {
+  res.render('live_classes_1', { title: 'Live Classes Primary' });
+});
+
+router.get('/live_classes_2', function(req, res) {
+  res.render('live_classes_2', { title: 'Live Classes Secondary' });
+});
+
+router.get('/live_classes_3', function(req, res) {
+  res.render('live_classes_3', { title: 'Live Classes University' });
+});
+
 module.exports = router;
