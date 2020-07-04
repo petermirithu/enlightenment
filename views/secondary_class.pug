@@ -1,0 +1,163 @@
+extends layout
+block content
+  section#header7-2r.header7.cid-s3zBFHUyJG
+    .container
+      .media-container-row
+        .media-content.align-right
+          h1.mbr-section-title.mbr-white.pb-3.mbr-fonts-style.display-1 Secondary Intro
+          .mbr-section-text.mbr-white.pb-3
+            p.mbr-text.mbr-fonts-style.display-5
+              | In this lesson the student will be introduced to the core concepts of chemistry 1.
+          .mbr-section-btn
+            a.btn.btn-md.btn-primary.display-4(href='#products')
+              span.mbri-responsive.mbr-iconfont.mbr-iconfont-btn
+              | More Videos
+            a.btn.btn-md.btn-white-outline.display-4(href='/live_classes_2') LIVE Class
+        .mbr-figure(style='width: 100%;')          
+          iframe.mbr-embedded-video(width="633" height="376" src="https://www.youtube.com/embed/k3rRrl9J2F4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+  section#timeline1-2s.timeline1.cid-s3zCsGGUIO
+    .container.align-center
+      h2.mbr-section-title.pb-3.mbr-fonts-style.display-2
+        | Timeline
+      h3.mbr-section-subtitle.pb-5.mbr-fonts-style.display-5
+        | Below are the times we have online live classes.
+      .container.timelines-container(mbri-timelines='')
+        // 1
+        .row.timeline-element.reverse.separline
+          .timeline-date-panel.col-xs-12.col-md-6.align-left
+            .time-line-date-content
+              p.mbr-timeline-date.mbr-fonts-style.display-5
+                | Today @ 9am
+          span.iconBackground
+          .col-xs-12.col-md-6.align-right
+            .timeline-text-content
+              h4.mbr-timeline-title.pb-3.mbr-fonts-style.display-5
+                | Newton's First Law of Motion - Second & Third.
+              p.mbr-timeline-text.mbr-fonts-style.display-7
+                | Will cover the concept behind Newton's First Law of motion as well as his second and third law of motion. 
+
+              a(href="#") Join https://youtu.be/g550H4e5FCY
+        // 2
+        .row.timeline-element.separline
+          .timeline-date-panel.col-xs-12.col-md-6.align-right
+            .time-line-date-content
+              p.mbr-timeline-date.mbr-fonts-style.display-5
+                | Today @ 1pm
+          span.iconBackground
+          .col-xs-12.col-md-6.align-left
+            .timeline-text-content
+              h4.mbr-timeline-title.pb-3.mbr-fonts-style.display-5
+                | Basic forms of Business
+              p.mbr-timeline-text.mbr-fonts-style.display-7
+                | Get to understand how the business world is structured.
+
+              a(href="#") Join https://youtu.be/nTd2kMBGnmQ
+        // 3
+        .row.timeline-element.reverse
+          .timeline-date-panel.col-xs-12.col-md-6.align-left
+            .time-line-date-content
+              p.mbr-timeline-date.mbr-fonts-style.display-5
+                | Today @ 3.30pm
+          span.iconBackground
+          .col-xs-12.col-md-6.align-right
+            .timeline-text-content
+              h4.mbr-timeline-title.pb-3.mbr-fonts-style.display-5
+                | Generation of Computer
+              p.mbr-timeline-text.mbr-fonts-style.display-7
+                | Learn about various generation of computer with examples which covers vacuum tube computers to AI based computers of future!
+
+              a(href="#") Join https://youtu.be/NqgpZ_v4Ne8
+  section#products
+    .products
+      .container
+        .row
+          .col-md-12            
+            .filters
+              ul
+                li.active(onclick="filterSelection('all')") All Videos
+                li(onclick="filterSelection('des')") Geography
+                li(onclick="filterSelection('dev')") Biology
+                li(onclick="filterSelection('gra')") History
+          .col-md-12
+            .filters-content
+              .row
+                .col-lg-4.col-md-4.all.filterDiv.des
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/zNlAXBZw1to" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Landforms at Plate Boundaries
+                      p
+                        | How the earth is structured
+                .col-lg-4.col-md-4.all.filterDiv.dev
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/aubZU0iWtgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Diffusion and osmosis                     
+                      p
+                        | Learn about diffusion, osmosis, and concentration gradients and why these are important to cells.
+                .col-lg-4.col-md-4.all.filterDiv.gra
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/SLj5r2nZHB8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 World War
+                      p
+                        | Let's retrace on a map a summary of the chain of events of WWI, the so-called "Great War". This video summarises the origins, course and consequences of this war.
+                .col-lg-4.col-md-4.all.filterDiv.gra
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/ehV-MmuvVMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Human Origins
+                      p
+                        | Learn about the over 20 early human species that belong in our family tree and how the natural selection of certain physical and behavioral traits
+                .col-lg-4.col-md-4.all.filterDiv.dev
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/V5hhrDFo8Vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Macromolecules
+                      p
+                        | Macromolecules are large structures that make up all living organisms. All macromolecules have small subunits called monomers which bind together to form larger units called polymers. There are four classes of macromolecules. 
+                .col-lg-4.col-md-4.all.filterDiv.des
+                  .product-item
+                    a(href='#')
+                      iframe(width="100%" src="https://www.youtube.com/embed/G4H1N_yXBiA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                    .down-content                      
+                      h4 Causes and Effects of Climate Change
+                      p
+                        | What causes climate change (also known as global warming)? And what are the effects of climate change? Learn the human impact and consequences of climate change for the environment, and our lives.
+  script.
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }      
