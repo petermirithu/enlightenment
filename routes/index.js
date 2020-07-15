@@ -11,7 +11,7 @@ function isAuthenticated(req, res, next) {
   else{
     req.session.redirectTo = req.originalUrl; 
     req.flash('success','Please Sign In if you have an Account'),            
-    res.redirect('/users/signup');     
+    res.redirect('/signup');     
   }
 }
 
@@ -43,27 +43,27 @@ router.get('/university_courses', function(req, res) {
   res.render('university_courses', { title: 'University Courses' });
 });
 
-router.get('/primary_class', function(req, res) {
+router.get('/primary_class',isAuthenticated, function(req, res) {
   res.render('primary_class', { title: 'Primary Class' });
 });
 
-router.get('/secondary_class', function(req, res) {
+router.get('/secondary_class',isAuthenticated, function(req, res) {
   res.render('secondary_class', { title: 'Secondary Class' });
 });
 
-router.get('/university_class', function(req, res) {
+router.get('/university_class',isAuthenticated, function(req, res) {
   res.render('university_class', { title: 'University Class' });
 });
 
-router.get('/live_classes_1', function(req, res) {
+router.get('/live_classes_1',isAuthenticated, function(req, res) {
   res.render('live_classes_1', { title: 'Live Classes Primary' });
 });
 
-router.get('/live_classes_2', function(req, res) {
+router.get('/live_classes_2',isAuthenticated, function(req, res) {
   res.render('live_classes_2', { title: 'Live Classes Secondary' });
 });
 
-router.get('/live_classes_3', function(req, res) {
+router.get('/live_classes_3',isAuthenticated, function(req, res) {
   res.render('live_classes_3', { title: 'Live Classes University' });
 });
 
@@ -72,8 +72,7 @@ router.get('/signup', function(req, res) {
   res.render('signup', { title: 'Sign Up' });
 });
 
-
-router.get('/profile', async(req, res) => {
+router.get('/profile',isAuthenticated, async(req, res) => {
   let profile= await Profile.findOne({where: {userId: req.user.id}})
   res.render('profile', { title: 'Profile',profile:profile});
 });
