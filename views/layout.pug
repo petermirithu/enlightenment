@@ -66,10 +66,33 @@ body
               span.mbrib-search.mbr-iconfont.mbr-iconfont-btn(style='color: rgb(0, 106, 186);')
           li.nav-item
             a.nav-link.link.text-white.display-4(href='#')
-        .navbar-buttons.mbr-section-btn
-          a.btn.btn-sm.btn-primary.display-4(href='#' onclick="document.getElementById('id01').style.display='block'")
-            span.mbrib-login.mbr-iconfont.mbr-iconfont-btn
-            | Sign In
+        if user                    
+          div.nav-item.dropdown
+            a.nav-link.link.text-white.dropdown-toggle.display-4(href='#' data-toggle='dropdown-submenu' aria-expanded='false')=user.username
+            .dropdown-menu
+              a.text-white.dropdown-item.display-4(href='/profile' aria-expanded='true') Profile
+              a.text-white.dropdown-item.display-4(href='/users/logout') Log Out
+        else 
+          .navbar-buttons.mbr-section-btn      
+            a.btn.btn-sm.btn-primary.display-4(href='#' onclick="document.getElementById('id01').style.display='block'")
+              span.mbrib-login.mbr-iconfont.mbr-iconfont-btn
+              | Sign In
+  if successes
+    div.notification(style="position:absolute;margin-top:100px;z-index:999 !important")                                                                                                                                                 
+      for success in successes
+        div.alert.alert-dismissible.fade.show(style="background-color:lightgreen;color:black" role="alert")
+          strong
+            span #{ success }
+          button(type="button" class="close" data-dismiss="alert" aria-label="Close")
+            span(aria-hidden="true") &times;           
+  if errors
+    div.notification(style="position:absolute;margin-top:100px;z-index:999 !important")                                                                                                  
+      for error, i in errors
+        div.alert.alert-dismissible.fade.show(style="background-color:red;color:white" role="alert")
+          strong
+            span #{ error }
+          button(type="button" class="close" data-dismiss="alert" aria-label="Close")
+            span(aria-hidden="true") &times;                     
   block content
   section#footer4-1i.footer4.cid-s3vRrgSi8K
     .container
@@ -136,7 +159,7 @@ body
             p.mbr-text.mbr-fonts-style.display-7
               | &copy; Copyright 2020 Enlightenment&nbsp;- All Rights Reserved
   div#id01.signinmodal  
-    form.modal-content.animate()
+    form.modal-content.animate(method="POST" action='/users/login')
       div.imgcontainer            
         img(src="/images/login.jpg" alt="Avatar" class="avatar")        
       div.container            
@@ -152,7 +175,7 @@ body
       div.container(style="background-color:#f1f1f1")
         button.btn.btn-primary(type="button" onclick="document.getElementById('id01').style.display='none'").cancelbtn Cancel
         span.psw Don't have an Account? 
-          a(href="#") Sign Up
+          a(href="/signup") Sign Up
 script(src='javascripts/jquery.min.js')
 script(src='javascripts/popper.min.js')
 script(src='javascripts/bootstrap.min.js')

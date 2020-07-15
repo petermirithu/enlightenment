@@ -64,16 +64,41 @@ section#menu1-0.menu.cid-qTkzRZLJNu(once='menu')
             span.mbrib-search.mbr-iconfont.mbr-iconfont-btn(style='color: rgb(0, 106, 186);')
         li.nav-item
           a.nav-link.link.text-white.display-4(href='#')
-      .navbar-buttons.mbr-section-btn      
-        a.btn.btn-sm.btn-primary.display-4(href='#' onclick="document.getElementById('id01').style.display='block'")
-          span.mbrib-login.mbr-iconfont.mbr-iconfont-btn
-          | Sign In
-        
+
+      if user                    
+        div.nav-item.dropdown
+          a.nav-link.link.text-white.dropdown-toggle.display-4(href='#' data-toggle='dropdown-submenu' aria-expanded='false')=user.username
+          .dropdown-menu
+            a.text-white.dropdown-item.display-4(href='/profile' aria-expanded='true') Profile
+            a.text-white.dropdown-item.display-4(href='/users/logout') Log Out
+      else 
+        .navbar-buttons.mbr-section-btn      
+          a.btn.btn-sm.btn-primary.display-4(href='#' onclick="document.getElementById('id01').style.display='block'")
+            span.mbrib-login.mbr-iconfont.mbr-iconfont-btn
+            | Sign In
+
 section#header6-d.header6.cid-s3uWYKqdpM.mbr-fullscreen(data-bg-video='https://youtu.be/wJ9--xyoGPE')
   .mbr-overlay(style='opacity: 0.7; background-color: rgb(35, 35, 35);')
   .container
-    .row.justify-content-md-center
+    .row.justify-content-md-center                          
       .mbr-white.col-md-10
+        if successes
+          div.notification                                                 
+            for success in successes
+              div.alert.alert-dismissible.fade.show(style="background-color:lightgreen;color:black" role="alert")
+                strong
+                  span #{ success }
+                button(type="button" class="close" data-dismiss="alert" aria-label="Close")
+                  span(aria-hidden="true") &times;           
+        if errors
+          div.notification                                                 
+            for error, i in errors
+              div.alert.alert-dismissible.fade.show(style="background-color:red;color:white" role="alert")
+                strong
+                  span #{ error }
+                button(type="button" class="close" data-dismiss="alert" aria-label="Close")
+                  span(aria-hidden="true") &times;                     
+          
         h1.mbr-section-title.align-center.mbr-bold.pb-3.mbr-fonts-style.display-1(style="color:#DAA625") The Enlightenment
         p.mbr-text.align-center.pb-3.mbr-fonts-style.display-5
           | Welcome to The Enlightenment&nbsp;where we 
@@ -358,9 +383,9 @@ section#info2-1c.mbr-section.info2.cid-s3vAr7rAKz
     .row.main.justify-content-center
       .media-container-column.col-12.col-lg-3.col-md-4
         .mbr-section-btn.align-left.py-4
-          a.btn.btn-primary.display-4(href='#')
+          a.btn.btn-primary.display-4(href='/signup')
             span.mbri-preview.mbr-iconfont
-            | View More
+            | Join Us
       .media-container-column.title.col-12.col-lg-7.col-md-6
         h2.align-right.mbr-bold.mbr-white.pb-3.mbr-fonts-style.display-2 Volunteer us as a Tutor.
         h3.mbr-section-subtitle.align-right.mbr-light.mbr-white.mbr-fonts-style.display-5
@@ -471,7 +496,7 @@ section#footer1-2.cid-qTkAaeaxX5.mbr-reveal
                 span.socicon-googleplus.socicon.mbr-iconfont.mbr-iconfont-social
 
 div#id01.signinmodal  
-  form.modal-content.animate()
+  form.modal-content.animate(method="POST" action='/users/login')
     div.imgcontainer            
       img(src="/images/login.jpg" alt="Avatar" class="avatar")        
     div.container            
@@ -487,7 +512,7 @@ div#id01.signinmodal
     div.container(style="background-color:#f1f1f1")
       button.btn.btn-primary(type="button" onclick="document.getElementById('id01').style.display='none'").cancelbtn Cancel
       span.psw Don't have an Account? 
-        a(href="#") Sign Up
+        a(href="/signup") Sign Up
 
 
 script(src='javascripts/jquery.min.js')
