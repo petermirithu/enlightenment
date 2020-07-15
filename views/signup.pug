@@ -1,0 +1,75 @@
+extends layout
+block content
+  section#header16-49.header1.cid-s3AmiWQdrR     
+    .mbr-overlay(style='opacity: 1; background-image: url("../images/mbr-950x633.jpg");background-position:center;background-size:cover')
+    .container
+      .row.justify-content-md-center
+        .col-md-10.align-center
+          h1.mbr-section-title.mbr-bold.pb-3.mbr-fonts-style.display-1(style="color:#DAA625") Sign Up
+          p.mbr-text.pb-3.mbr-fonts-style.display-5.ml14(style="color:black")
+            span.text-wrapper
+              span.letters  Lets Forge the future together
+              span.line                                
+          .mbr-section-btn
+            a.btn.btn-md.btn-success-outline.display-4(href='#clax')
+              span.mbri-edit.mbr-iconfont.mbr-iconfont-btn
+              | Join    
+  section                
+    div.container-fluid        
+        div.wrap                        
+            div.column#clax
+                h1.text-center Fill in the form to join us
+                form(method='POST' style="margin-left:15%;margin-right:15%;padding:10px;margin-bottom:5%;border: 2px solid #61BAAD" action='/users/register')               
+                    #form-group
+                        label User Name:
+                        input.form-control(name='username',type='text' required)
+                    #form-group
+                        label Email:
+                        input.form-control(name='email',type='email' required)
+                    
+                    #form-group
+                        label Password:
+                        input.form-control(name='password',type='password' required)    
+
+                    #form-group
+                        label Confirm Password:
+                        input.form-control(name='password2',type='password' required)    
+                    br
+                    p By creating an account you agree to our 
+                        span
+                            a(href="#") Terms & Privacy.                        
+                    br        
+                    input.btn.btn-primary(type='submit',value='Submit')              
+    
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+    script.
+        // Wrap every letter in a span
+        var textWrapper = document.querySelector('.ml14 .letters');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({loop: true})
+        .add({
+            targets: '.ml14 .line',
+            scaleX: [0,1],
+            opacity: [0.5,1],
+            easing: "easeInOutExpo",
+            duration: 900
+        }).add({
+            targets: '.ml14 .letter',
+            opacity: [0,1],
+            translateX: [40,0],
+            translateZ: 0,
+            scaleX: [0.3, 1],
+            easing: "easeOutExpo",
+            duration: 800,
+            offset: '-=600',
+            delay: (el, i) => 150 + 25 * i
+        }).add({
+            targets: '.ml14',
+            opacity: 0,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+        });
+    
