@@ -30,7 +30,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(expressValidator());
 app.use(session({ cookie: { maxAge: 60000 }, 
-    secret: 'wosdwswdwdwdwqdwqddqwdwdqdqwot',
+    secret: 'wosdwswdwdwdwqdwqddhjh%$$qwdwssdfsfdsdsfsdfsdfdsfdqdqwot',
     resave: false, 
     saveUninitialized: false}));
 // express-messages middleware for flash
@@ -44,9 +44,16 @@ app.use((req, res, next) => {
 // passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
-    
+
+app.use(function(req,res,next){
+    if (req.user) {
+        res.locals.user = req.user;        
+    }
+    next();
+});
+
 app.use('/', routes);
-app.use('/user', users);
+app.use('/users', users);
 
 
 // passport config
