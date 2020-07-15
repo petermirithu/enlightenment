@@ -1,2 +1,2 @@
 # Enlightenment
-![picture](public/images/enlight.png) 
+![picture](public/images/enlighten.png) 
