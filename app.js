@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var favicon = require('static-favicon');
 var logger = require('morgan');
+var { randomBytes } = require('crypto');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
@@ -9,14 +10,11 @@ var flash = require('connect-flash');
 var session = require('cookie-session');
 var db = require('./models/index');
 var http    = require('http')
-var csrf = require('csurf')
 
 const passport = require('passport');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
-var csrfProtection = csrf({ cookie: true })
 
 var app = express();
 
@@ -42,6 +40,13 @@ app.use((req, res, next) => {
   res.locals.successes = req.flash("success");
   next();
 });
+app.use(function (req, res, next) {
+    if (req.session.csrf === undefined) {
+      req.session.csrf = randomBytes(100).toString('base64'); // convert random data to a string
+    }        
+    res.locals.token = req.session.csrf;
+    next();
+});
 
 // passport middleware
 app.use(passport.initialize());
@@ -54,8 +59,8 @@ app.use(function(req,res,next){
     next();
 });
 
-app.use('/',csrfProtection, routes);
-app.use('/users',csrfProtection, users);
+app.use('/',routes);
+app.use('/users',users);
 
 
 // passport config
