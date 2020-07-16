@@ -9,12 +9,14 @@ var flash = require('connect-flash');
 var session = require('cookie-session');
 var db = require('./models/index');
 var http    = require('http')
+var csrf = require('csurf')
 
 const passport = require('passport');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+var csrfProtection = csrf({ cookie: true })
 
 var app = express();
 
@@ -52,8 +54,8 @@ app.use(function(req,res,next){
     next();
 });
 
-app.use('/', routes);
-app.use('/users', users);
+app.use('/',csrfProtection, routes);
+app.use('/users',csrfProtection, users);
 
 
 // passport config
