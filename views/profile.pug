@@ -64,7 +64,7 @@ block content
                     i Nothing to display at the moment
     div#id02.updateprofilemodal  
       form.modal-content.animate(method="POST" action='/users/profile')
-        input(type="hidden" name="_csrf" value="")
+        input(type='hidden' name='csrf' value=token)
         div.imgcontainer            
             if profile.profile_pic
                 img.avatar(src='/uploads/profile/'+profile.profile_pic width="80px" style="border-radius:50%" alt="profile")                                       

@@ -497,18 +497,17 @@ section#footer1-2.cid-qTkAaeaxX5.mbr-reveal
 
 div#id01.signinmodal  
   form.modal-content.animate(method="POST" action='/users/login')
-    input(type="hidden" name="_csrf" value="")
+    input(type='hidden' name='csrf' value=token)
     div.imgcontainer            
       img(src="/images/login.jpg" alt="Avatar" class="avatar")        
-    div.container            
+    div.container                  
       label(for="username") 
         b Username
       input(type="text" placeholder="Enter Username" name="username" required)
 
       label(for="password")
         b Password
-      input(type="password" placeholder="Enter Password" name="password" required)
-        
+      input(type="password" placeholder="Enter Password" name="password" required)      
       button.btn.btn-success(type="submit") Sign in            
     div.container(style="background-color:#f1f1f1")
       button.btn.btn-primary(type="button" onclick="document.getElementById('id01').style.display='none'").cancelbtn Cancel

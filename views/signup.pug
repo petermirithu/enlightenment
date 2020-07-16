@@ -20,7 +20,7 @@ block content
             div.column#clax
                 h1.text-center Fill in the form to join us
                 form(method='POST' style="margin-left:15%;margin-right:15%;padding:10px;margin-bottom:5%;border: 2px solid #61BAAD" action='/users/register')               
-                    input(type="hidden" name="_csrf" value="")
+                    input(type='hidden' name='csrf' value=token)
                     #form-group
                         label User Name:
                         input.form-control(name='username',type='text' required)

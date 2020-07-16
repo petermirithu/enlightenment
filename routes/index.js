@@ -15,7 +15,7 @@ function isAuthenticated(req, res, next) {
   }
 }
 
-router.get('/', function(req, res) {
+router.get('/', function(req, res) {    
   res.render('index', { title: 'Home' });
 });
 
