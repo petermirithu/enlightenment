@@ -160,6 +160,7 @@ body
               | &copy; Copyright 2020 Enlightenment&nbsp;- All Rights Reserved
   div#id01.signinmodal  
     form.modal-content.animate(method="POST" action='/users/login')
+      input(type="hidden" name="_csrf" value="")
       div.imgcontainer            
         img(src="/images/login.jpg" alt="Avatar" class="avatar")        
       div.container            
