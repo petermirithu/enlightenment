@@ -16,8 +16,7 @@ if (!global.hasOwnProperty('db')){
       dialect:  'postgres',
       protocol: 'postgres',
       port:     5000,
-      host:     "heroku host",
-      logging:  true 
+      host:     "heroku host",      
     })
 
   } else {

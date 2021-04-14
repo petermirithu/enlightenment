@@ -77,4 +77,43 @@ router.get('/profile',isAuthenticated, async(req, res) => {
   res.render('profile', { title: 'Profile',profile:profile});
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+router.get('/', function(req, res) {    
+  res.send('Hello Games')
+});
+
+
+
+
+
+
+
+
+
+
+
+
 module.exports = router;
