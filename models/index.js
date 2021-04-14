@@ -16,7 +16,13 @@ if (!global.hasOwnProperty('db')){
       dialect:  'postgres',
       protocol: 'postgres',
       port:     5000,
-      host:     "heroku host",      
+      host:     "heroku host",   
+      dialectOptions: {
+        ssl: {
+          require: true, 
+          rejectUnauthorized: false
+        }
+      },   
     })
 
   } else {
